@@ -1,0 +1,29 @@
+{{define "body"}}
+<div class="content-width">
+    <h1>Create a profile</h1>
+    {{with .Error}}<div id="error">{{.}}</div>{{end}}
+    <form method="post">
+        <label for="">First name</label>
+        <input type="text" name="first_name" {{with .FirstName}}value="{{.}}"{{end}}>
+        {{with .FirstNameError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Last name</label>
+        <input type="text" name="last_name" {{with .LastName}}value="{{.}}"{{end}}>
+        {{with .LastNameError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Business name</label>
+        <input type="text" name="business_name" {{with .BusinessName}}value="{{.}}"{{end}}>
+        {{with .BusinessNameError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Phone</label>
+        <input type="tel" name="phone" {{with .Phone}}value="{{.}}"{{end}}>
+        {{with .PhoneError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Website</label>
+        <input type="text" name="website" {{with .Website}}value="{{.}}"{{end}}>
+        {{with .WebsiteError}}<div>{{.}}</div>{{end}}
+
+        <button>Start posting!</button>
+    </form>
+</div>
+{{end}}

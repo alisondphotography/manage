@@ -1,0 +1,17 @@
+{{define "body"}}
+<div class="content-width">
+    <h1>Sign up</h1>
+   {{with .Error}}<div id="error">{{.}}</div>{{end}}
+    <form class="big-fields" method="post">
+        <label for="">Email</label>
+        <input type="email" name="email" {{with .Email}}value="{{.}}"{{end}}>
+        {{with .EmailError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Password</label>
+        <input type="password" name="password" {{with .Password}}value="{{.}}"{{end}}>
+        {{with .PasswordError}}<div>{{.}}</div>{{end}}
+
+        <button>Sign up</button>
+    </form>
+</div>
+{{end}}

@@ -1,0 +1,8 @@
+{{define "body"}}
+<h1>Your listings</h1>
+<ul>
+{{range .}}
+    <li><a href="/listing/update?id={{.ID}}">{{.}}</a></li>
+{{end}}
+</ul>
+{{end}}

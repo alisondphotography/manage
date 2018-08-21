@@ -1,0 +1,33 @@
+{{define "body"}}
+<div class="content-width">
+    <h1>Update content</h1>
+    {{with .Error}}<div id="error">{{.}}</div>{{end}}
+    <form method="post">
+        <label for="">Title</label>
+        <input type="text" name="title" value="This is the title">
+        {{with .TitleError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Description</label>
+        <textarea>This is the content of the listing. It's the kind of content that will make you squeal with excitement. I call it "Christmas Morning Content". I should probably trademark that. Man, I'm good.</textarea>
+
+        <label for="">Length</label>
+        <input type="number" name="length" value="72">
+        {{with .LengthError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Width</label>
+        <input type="number" name="width" value="34">
+        {{with .WidthError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Height</label>
+        <input type="number" name="height" value="27">
+        {{with .HeightError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Price per day</label>
+        <input type="number" name="price_per_day" value="45">
+        {{with .PricePerDayError}}<div>{{.}}</div>{{end}}
+
+        <button>Save</button>
+        <a href="/listing/update">Cancel</a>
+    </form>
+</div>
+{{end}}

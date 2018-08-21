@@ -1,0 +1,33 @@
+{{define "body"}}
+<div class="content-width">
+    <h1>Create a listing</h1>
+    {{with .Error}}<div id="error">{{.}}</div>{{end}}
+    <form method="post">
+        <label for="">Title</label>
+        <input type="text" name="title" {{with .Title}}value="{{.}}"{{end}}>
+        {{with .TitleError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Description</label>
+        <input type="text" name="description" {{with .Description}}value="{{.}}"{{end}}>
+        {{with .DescriptionError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Length</label>
+        <input type="number" name="length" {{with .Length}}value="{{.}}"{{end}}>
+        {{with .LengthError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Width</label>
+        <input type="number" name="width" {{with .Width}}value="{{.}}"{{end}}>
+        {{with .WidthError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Height</label>
+        <input type="number" name="height" {{with .Height}}value="{{.}}"{{end}}>
+        {{with .HeightError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Price per day</label>
+        <input type="number" name="price_per_day" {{with .PricePerDay}}value="{{.}}"{{end}}>
+        {{with .PricePerDayError}}<div>{{.}}</div>{{end}}
+
+        <button>Start posting!</button>
+    </form>
+</div>
+{{end}}
