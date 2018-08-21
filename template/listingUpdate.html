@@ -1,33 +1,11 @@
 {{define "body"}}
 <div id="manage" class="content-width">
-    <div id="save">
-        <div>
-            This is an unpublished listing.
-        </div>
-        <div>
-            <button>Publish</button>
-        </div>
-    </div>
     <h1>Manage your listing</h1>
-    <ul>
-        <li><a href="/listing/update/content">Content</a></li>
-        <li><a href="/listing/update/images">Images</a></li>
-    </ul>
+    <a class="btn light" href="/listing/update/content">Content</a> <a class="btn light" href="/listing/update/images">Images</a>
+    <div id="preview">
+        This is a preview
+    </div>
 </div>
-<nav>
-    <div>
-        <a href="/account/create"><img class="nav-logo" src="/static/img/logo.png" alt=""></a>
-    </div>
-    <div>
-        <a href="/listing/create">Post</a>
-        <a href="/account">
-            <img class="profile-pic" src="/static/img/default_avatar_75x75-2.png" alt="">
-        </a>
-        <a href="/faves">
-            <svg class="fave-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16.5,3A6.953,6.953,0,0,0,12,5.051,6.912,6.912,0,0,0,7.5,3C4.364,3,2,5.579,2,9c0,5.688,8.349,12,10,12S22,14.688,22,9C22,5.579,19.636,3,16.5,3Z"></path></svg>
-        </a>
-    </div>
-</nav>
 
 <ul id="listing-images">
     <li></li>
